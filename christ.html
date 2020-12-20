@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/festival/js/slide.js"></script>
+<style>
+
+.rightcurtain {
+    width: 51%;
+    height: 120%;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    z-index: 300;
+    transform: translateZ(9px);
+}
+
+.leftcurtain {
+    width: 50%;
+    height: 120%;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 200;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1) translateZ(9px);
+}
+
+.leftcurtain {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+
+
+
+.rope {
+    position: absolute;
+    /*top: 20%;*/
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /*height: 100%;*/
+    z-index: 999999;
+    transform:translateZ(10px);
+}
+
+.rightcurtain img, .leftcurtain img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+</style>
+<script src="zounds.min.js"></script>
+<script>
+    var tiktok = zounds.load("/festival/sounds/christmas_new_year.mp3");
+    function playSound(){
+        tiktok.play();
+        // setTimeout(function(){
+        //     tiktok.play();
+        // },5000);
+        // setTimeout(function(){
+        //     tiktok.play();
+        // },10000);
+    }
+
+    function curtainOpen(){
+        playSound();
+        $('.figures').removeClass('hidden');
+        $('.circle-container').removeClass('hidden');
+        $('.timer-text').removeClass('hidden');
+        $('.figure_name').removeClass('hidden');
+        $('.auto_style_main_msg').removeClass('hidden');
+        $('.from_img').removeClass('hidden');
+        $('.main_msg_top').removeClass('hidden');
+        $('.twoimageset').removeClass('hidden');
+        $('.main-msg').removeClass('hidden');
+        $('.slideshow').removeClass('hidden');
+        $('.myslides_div').removeClass('hidden');
+        $('.ltrmarquee').removeClass('hidden');
+        $('.share_block').removeClass('hidden');
+        $('.img_overlap').removeClass('hidden');
+        $('.revolvingcards').removeClass('hidden');
+        $('.user_name2').removeClass('hidden');
+    }
+</script>
+<a class="rope " href="javascript:void(0)" onclick="curtainOpen();" style="bottom: auto;">
+<h3 class="fivepxbottom zerotop">Click Below</h3>
+<h4 class="fivepxtop fivepxbottom">👇👇👇👇👇</h4>
+<div class="matki" style="display: inline-block;">
+<img src="/festival/images/common/santa_curtain.gif" class="">
+</div>
+</a>
+
+</body>
+</html>
